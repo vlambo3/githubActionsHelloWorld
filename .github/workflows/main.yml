@@ -1,0 +1,28 @@
+name: Test
+run-name: Hello World
+
+on:
+  push:
+    paths:
+      - '**/main.yml'
+ 
+jobs:
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        ref: 'main'
+
+    - name: 'JDK 22'
+      uses: oracle-actions/setup-java@v1
+      with:
+        website: jdk.java.net
+
+    - name: Install Tree
+      run:
+        sudo apt install tree
+        tree
+        echo "Hello Vanina"
