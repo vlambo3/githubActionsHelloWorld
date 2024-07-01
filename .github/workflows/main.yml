@@ -22,7 +22,7 @@ jobs:
         website: jdk.java.net
 
     - name: Install Tree
-      run:
+      run: |
         sudo apt install tree
         tree
         echo "Hello Vanina"
