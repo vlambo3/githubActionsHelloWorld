@@ -24,5 +24,12 @@ jobs:
     - name: Install Tree
       run: |
         sudo apt install tree
+
+    - name: Run java
+      run: |
+        java Hello.java
+
+    - name: Show files
+      run: |
         tree
-        echo "Hello Vanina"
+        
